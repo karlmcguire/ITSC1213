@@ -1,0 +1,9 @@
+THIS IS ONE.
+THIS IS TWO.
+THIS IS THREE.
+THIS IS FOUR.
+THIS IS FIVE.
+a) e: 		4
+b) vowels: 	19
+c) chars: 	64
+d) spaces: 	10

@@ -40,20 +40,20 @@ public class StringMethods {
        * 15) Does step 13 change the original string, prove it by printing
        */
 
-		System.out.println("1) " + sentence.contains("nat"));
-   		System.out.println("2) " + sentence.contains("beat"));
-		System.out.println("3) " + sentence.substring(sentence.length()-4, sentence.length()).equals("ana"));
-		System.out.println("4) " + sentence.substring(sentence.length()-4, sentence.length()).equals("ana."));
-		System.out.println("5) " + sentence.indexOf("s"));
-		System.out.println("6) " + sentence.indexOf("s", sentence.indexOf("s")+1));
-		System.out.println("7) " + sentence.indexOf("s", sentence.indexOf("s", sentence.indexOf("s")+1)+1));
-   		System.out.println("8) " + sentence.lastIndexOf("s"));	
-		System.out.println("9) " + sentence.indexOf("is"));
-		System.out.println("10) " + sentence.lastIndexOf("is"));
-		System.out.println("11) " + sentence.replaceAll("s", "z"));
-		System.out.println("12) " + sentence);
-		System.out.println("13) '" + sentence.substring(3, 9) + "'");
-		System.out.println("14) " + sentence.toUpperCase());
-		System.out.println("15) " + sentence);
+        System.out.println("1) " + sentence.contains("nat"));
+        System.out.println("2) " + sentence.contains("beat"));
+        System.out.println("3) " + sentence.substring(sentence.length()-4, sentence.length()).equals("ana"));
+        System.out.println("4) " + sentence.substring(sentence.length()-4, sentence.length()).equals("ana."));
+        System.out.println("5) " + sentence.indexOf("s"));
+        System.out.println("6) " + sentence.indexOf("s", sentence.indexOf("s")+1));
+        System.out.println("7) " + sentence.indexOf("s", sentence.indexOf("s", sentence.indexOf("s")+1)+1));
+        System.out.println("8) " + sentence.lastIndexOf("s"));  
+        System.out.println("9) " + sentence.indexOf("is"));
+        System.out.println("10) " + sentence.lastIndexOf("is"));
+        System.out.println("11) " + sentence.replaceAll("s", "z"));
+        System.out.println("12) " + sentence);
+        System.out.println("13) '" + sentence.substring(3, 9) + "'");
+        System.out.println("14) " + sentence.toUpperCase());
+        System.out.println("15) " + sentence);
     }
 }

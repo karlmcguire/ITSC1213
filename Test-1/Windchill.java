@@ -14,7 +14,7 @@ public class Windchill
     private double windChillIndex;
     
     public Windchill() 
-	{
+    {
         temperatureInFahr = 32;
         windChillIndex = 32;
         windspeed = 0;
