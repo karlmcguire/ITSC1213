@@ -60,7 +60,8 @@ public class Date {
     }
 
     /**
-     * Date creates a new Date object with the parameters.
+     * Date creates a new Date object with the parameters - in this case a month
+     * name is used rather than a number.
      *
      * @param m is the month String (eg. "January")
      */
@@ -91,7 +92,7 @@ public class Date {
                 break;
             case "december": month = 12;
                 break;
-            default: month = 0;
+            default: month = 0; // not good 
                 break;
         }
     
@@ -318,6 +319,7 @@ public class Date {
             case 3: return "rd";
         }
 
+        // 4th, 5th, 6th, 7th, 8th, 9th
         return "th";
     }
 
@@ -425,8 +427,12 @@ public class Date {
      */
     public String getDate(char format) {
         if(format == 'S' || format == 's')
+            // format each number with two digits (2017 -> 17) and a leading
+            // zero (7 -> 07)
             return String.format("%02d/%02d/%02d", month, day, year % 100);
         else if(format == 'L' || format == 'l')
+            // output the month name and use daySuffix to append the correct
+            // suffix to the day number
             return String.format("%s %d%s, %d", 
                     monthName(month), day, daySuffix(day), year);
         
