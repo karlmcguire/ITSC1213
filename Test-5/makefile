@@ -7,6 +7,7 @@ JC = javac
 CLASSES = \
 	Card.java \
 	Deck.java \
+	Hand.java \
 	Game21.java 
 
 default: classes

@@ -1,8 +1,23 @@
+/**
+ *
+ * Card implements a simple card object
+ *
+ * @author Karl McGuire
+ * @version 12/9/17
+ */
+
 public class Card {
     private int value;
     private String suit;
     private String face;
 
+    /**
+     *
+     * Basic constructor for Card.
+     *
+     * @param s is the suit
+     * @param f is the face
+     */
     public Card(String s, String f) {       
         suit = s;
         face = f.toLowerCase();
@@ -22,22 +37,45 @@ public class Card {
         }
     }
 
+    /**
+     * @return suit
+     */
     public String getSuit() {
         return suit;
     }
 
+    /**
+     * @return face
+     */
     public String getFace() {
         return face;
     }
 
+    /**
+     * @return number value
+     */
     public int getValue() {
         return value;
     }
 
+    /**
+     *
+     * equals checks if the card equals the param card.
+     *
+     * @param card to be checked
+     * @return bool if equal
+     */
     public boolean equals(Card card) {
         return ((suit == card.getSuit()) && (face == card.getFace()));  
     }
 
+    /**
+     *
+     * compareTo is used in sorting.
+     *
+     * @param card to be compared
+     * @return relative value
+     */
     public int compareTo(Card card) {
         if(value < card.getValue()) {
             return -1;
@@ -49,6 +87,8 @@ public class Card {
         // 
         // A, K, Q, J
         //
+        // (not sure why this is important but it says in the instructions that
+        //  this is the order the cards should be sorted in)
         if(face == "ace") {
             if(card.getFace() == "ace") {
                 return 0;
@@ -82,7 +122,13 @@ public class Card {
         return 0; 
     }
 
+    /**
+     *
+     * displays card state in string form.
+     *
+     * @return card state
+     */
     public String toString() {
-        return face + " of " + suit + ", value of (" + value + ")";             
+        return face.substring(0, 1).toUpperCase() + face.substring(1) + " of " + suit;             
     }
 }
