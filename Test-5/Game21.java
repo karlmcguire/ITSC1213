@@ -16,9 +16,9 @@ public class Game21 {
         Hand dealer, player;
         // playing determines if the game should continue
         boolean playing = true;
-        // scores contains the number of games won by the dealer and player, 
+        // wins contains the number of games won by the dealer and player, 
         // respectively
-        int[] scores = {0, 0};
+        int[] wins = {0, 0};
 
         // loop forever (until user breaks it by "quitting")
         for(;;) {
@@ -42,14 +42,14 @@ public class Game21 {
                     System.out.println(dealer.toString());
                     playing = false; 
                     // add win to player
-                    scores[1]++;
+                    wins[1]++;
                     break;
                 } else if(dealer.getScore() == 21) {
                     System.out.println("Dealer wins with hand: " + dealer.getScore());   
                     System.out.println(dealer.toString());
                     playing = false; 
                     // add win to dealer
-                    scores[0]++;
+                    wins[0]++;
                     break;
                 } else {
                     System.out.println("Dealer hand: " + dealer.getScore());
@@ -62,14 +62,14 @@ public class Game21 {
                     System.out.println(player.toString());
                     playing = false; 
                     // add win to dealer
-                    scores[0]++;
+                    wins[0]++;
                     break;
                 } else if(player.getScore() == 21) {
                     System.out.println("Player wins with hand: " + player.getScore());
                     System.out.println(player.toString());
                     playing = false; 
                     // add win to player
-                    scores[1]++;
+                    wins[1]++;
                     break;
                 } else {
                     System.out.println("Player hand: " + player.getScore());
@@ -95,8 +95,8 @@ public class Game21 {
 
             // print the dealer and player win counts
             System.out.println("====================");
-            System.out.println("Dealer wins: " + scores[0]);
-            System.out.println("Player wins: " + scores[1]);
+            System.out.println("Dealer wins: " + wins[0]);
+            System.out.println("Player wins: " + wins[1]);
             System.out.println("====================");
 
             // prompt to play again
