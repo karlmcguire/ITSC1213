@@ -2,28 +2,19 @@ import java.util.Random;
 
 public class Deck {
     private Card[] deck = new Card[52];
-    private final String[] suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
-    private final String[] faces = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
     private int top = 52;
 
-    /**
-     *
-     * Basic no-args constructor for populating the array.
-     */
     public Deck() {
-        int c = 0;
-        for(int i = 0; i < suits.length; i++)
-            for(int a = 0; a < faces.length; a++, c++)
-                deck[c] = new Card(suits[i], faces[a]);
+        for(Card.Suit suit : Card.Suit.values())
+            for(Card.Face face : Card.Face.values())
+                deck[(suit.ordinal()*13)+(face.ordinal()+1)-1] = new Card(suit, face);
     }
 
-    // returns a copy of the top card 
     public Card getTopCard() {
         top = (top == 0) ? 51 : top - 1; 
         return new Card(deck[top].getSuit(), deck[top].getFace());
     }
 
-    // shuffle randomly
     public void shuffle() {
         Random rand = new Random();
         Card tmp;
@@ -37,14 +28,5 @@ public class Deck {
         }
 
         top = 52;
-    }
-
-    public String toString() {
-        StringBuilder output = new StringBuilder();
-
-        for(int i = 0; i < deck.length; i++)
-            output.append((i+1) + ": " +deck[i].toString() + "\n");
-
-        return output.toString();
     }
 }

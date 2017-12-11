@@ -12,7 +12,7 @@ public class Hand {
         cards[cardCount] = new Card(c.getSuit(), c.getFace());
         cardCount++;
         
-        if(c.getFace() == "ace")
+        if(c.getFace() == Card.Face.ACE)
             score = (score + 11 > 21) ? score + 1 : score + 11; 
         else
             score = score + c.getValue();

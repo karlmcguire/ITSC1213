@@ -1,12 +1,5 @@
 import java.util.Scanner;
 
-/**
- *
- * Game21 implements a basic blackjack game.
- *
- * @author Karl McGuire
- * @version 12/9/17
- */
 public class Game21 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
