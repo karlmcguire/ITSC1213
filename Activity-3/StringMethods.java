@@ -6,8 +6,8 @@
  * @version 09/19/17
  */
 public class StringMethods {
-    public static void main(String[] args) {
-    	// sentence object for manipulation
+	public static void main(String[] args) {
+		// sentence object for manipulation
 		String sentence = new String(
 			"The Mississippi originates in Minnesota and flows to Louisiana."
 		);
